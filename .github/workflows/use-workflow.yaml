@@ -1,9 +1,14 @@
-name: use workflow
-on: 
+
+name: Test Github
+
+on:
   pull_request:
-    branches: [ main ]
+    branches: [ main ]
+  workflow_dispatch:
+ 
+
 jobs:
-  do-it:
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: use-workflow
