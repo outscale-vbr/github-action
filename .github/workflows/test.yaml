@@ -21,4 +21,4 @@ jobs:
         VERSION=sha-${GITHUB_SHA::8}
         echo ::set-output name=VERSION::${VERSION}	
     - name: print
-      run: echo ${{ step.prep.outputs.VERSION }} 
+      run: echo ${{ steps.prep.outputs.VERSION }} 
