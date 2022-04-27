@@ -1,0 +1,11 @@
+name: use workflow
+on: 
+  pull_request:
+    branches: [ main ]
+jobs:
+  do-it:
+    use: outscale-vbr/github-action/.github/workflows/test-workflow.yaml@test
+    with:
+      message: hello
+      secrets:
+        access_secret: ${{ secrets.ACCESS_SECRET }}

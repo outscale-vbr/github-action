@@ -1,19 +1,24 @@
-name: Test Github
+name: test workflow
 
 on:
-  pull_request:
-    branches: [ main ]
-
+  workflow_call:
+    inputs:
+      message:
+        type: string
+        required: true
+      secrets:
+        access_secret:
+          required: true
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: hello
-      run: bash -c "echo 'hello'"
+      run: bash -c "echo ${{inputs.message}}"
     - name: hello-secret
       env:
-        ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+        ACCESS_SECRET: ${{ secrets.access_secret }}
       run: echo "${ACCESS_SECRET}"
     - name: Prepare
       id: prep
