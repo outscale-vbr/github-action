@@ -15,9 +15,8 @@ jobs:
       env:
         ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
       run: echo "${ACCESS_SECRET}"
-    - id: set-info
-      run: |
-        echo "::set-output name=info::$info"
-      env:
-        info: test
-	
+    - name: Prepare
+      id: prep
+       run: |
+	  VERSION=sha-${GITHUB_SHA::8}
+          echo ::set-output name=VERSION::${VERSION}	
