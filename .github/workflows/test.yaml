@@ -22,3 +22,6 @@ jobs:
         echo ::set-output name=VERSION::${VERSION}	
     - name: print
       run: echo ${{ steps.prep.outputs.VERSION }} 
+    - name: warning
+      run: |
+        echo '::warning:: this is a warning'
