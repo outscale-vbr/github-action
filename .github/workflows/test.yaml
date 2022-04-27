@@ -25,3 +25,8 @@ jobs:
     - name: warning
       run: |
         echo '::warning:: this is a warning'
+    - name: hello
+      run: |
+        echo "::group::hello"
+	echo "Hello"
+	eccho "::endgroup::"
