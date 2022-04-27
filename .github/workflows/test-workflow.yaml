@@ -4,11 +4,12 @@ on:
   workflow_call:
     inputs:
       message:
+        descrription: "Message"
         type: string
         required: true
-      secrets:
-        access_secret:
-          required: true
+      access_secret:
+        description: "Secret"
+        required: true
 jobs:
   test:
     runs-on: ubuntu-latest

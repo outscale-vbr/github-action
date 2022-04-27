@@ -15,5 +15,4 @@ jobs:
       uses: outscale-vbr/github-action/blob/test/.github/workflows/test-workflow.yaml@test
       with:
         message: hi
-      secrets:
         access_secret: ${{ secrets.ACCESS_SECRET }}
