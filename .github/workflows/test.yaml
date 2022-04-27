@@ -17,6 +17,6 @@ jobs:
       run: echo "${ACCESS_SECRET}"
     - name: Prepare
       id: prep
-       run: |
-	  VERSION=sha-${GITHUB_SHA::8}
-          echo ::set-output name=VERSION::${VERSION}	
+      run: |
+        VERSION=sha-${GITHUB_SHA::8}
+        echo ::set-output name=VERSION::${VERSION}	
