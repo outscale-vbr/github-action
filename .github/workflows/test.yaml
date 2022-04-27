@@ -1,0 +1,23 @@
+name: Test Github
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: hello
+      run: bash -c "echo 'hello'"
+    - name: hello-secret
+      env:
+        ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+      run: echo "${ACCESS_SECRET}"
+    - id: set_service_names
+      run: |
+        echo "::set-output name=services::$SERVICES"
+      env:
+        SERVICES: service
+	
