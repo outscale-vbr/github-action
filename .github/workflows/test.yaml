@@ -15,9 +15,9 @@ jobs:
       env:
         ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
       run: echo "${ACCESS_SECRET}"
-    - id: name
+    - id: set-info
       run: |
-        echo "::set-output name=services::$name"
+        echo "::set-output name=info::$info"
       env:
-        name: test
+        info: test
 	
