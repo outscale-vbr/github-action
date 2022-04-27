@@ -4,10 +4,11 @@ on:
     branches: [ main ]
 jobs:
   do-it:
-  steps:
-  - name: use-workflow
-    uses: outscale-vbr/github-action/blob/test/.github/workflows/test-workflow.yaml@test
-    with:
-      message: hello
-      secrets:
-        access_secret: ${{ secrets.ACCESS_SECRET }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: use-workflow
+      uses: outscale-vbr/github-action/blob/test/.github/workflows/test-workflow.yaml@test
+      with:
+        message: hello
+        secrets:
+          access_secret: ${{ secrets.ACCESS_SECRET }}
