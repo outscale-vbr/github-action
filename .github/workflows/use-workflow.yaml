@@ -5,7 +5,7 @@ on:
 jobs:
   do-it:
   steps:
-  - uses: outscale-vbr/github-action/.github/workflows/test-workflow.yaml@test
+  - uses: outscale-vbr/github-action/blob/test/.github/workflows/test-workflow.yaml@test
     with:
       message: hello
       secrets:
