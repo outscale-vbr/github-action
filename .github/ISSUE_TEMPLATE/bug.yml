@@ -57,7 +57,7 @@ body:
           - **Install tools**: calico, ...
           - **Kubernetes Distribution**: rke
           - **Kubernetes Distribution Version**:  v1.3.10
-       value: |
+      value: |
           - Kubernetes version: (use `kubectl version`): 
           - OS (e.g. from `/etc/os-release`):
           - Kernel (e.g. `uname -a`):
