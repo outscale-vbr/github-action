@@ -12,27 +12,27 @@ body:
       description: Which problem your feature request will solve ?
       placeholder: Explain with a clear and concise description
     validations:
-      required: false
+      required: true
   - type: textarea
     id: describe
     attributes: 
       label: Describe the solution you would like
       description: Describe with a clear and concise description 
     validations:
-      required: false
+      required: true
   - type: textarea
     id: context
     attributes:
       label: Additional context      
       description: Any context about your feature request that will allow us to understand your feature request 
     validations:
-      required: false	
+      required: true	
   - type: textarea
     id: env
     attributes:
       label: Environment
       description: |
-        examples:
+        example:
           - **Kubernetes version: (use `kubectl version`)**: v1.23.6
           - **OS (e.g. from `/etc/os-release`)**: CentOS Linux 7 (Core)
           - **Kernel (e.g. `uname -a`)**: 3.10.0-1160.15.2.el7.x86_64
@@ -52,4 +52,4 @@ body:
           - Kubernetes Diestribution version:
       render: markdown
     validations:
-      required: false
+      required: true

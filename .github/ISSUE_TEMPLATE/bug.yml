@@ -12,21 +12,21 @@ body:
       description: What happened ? 
       placeholder: Explain the bug with a clear and concise description
     validations:
-      required: false
+      required: true
   - type: textarea
     id: step
     attributes: 
       label: Step to reproduce
       description: What steps did you take (as minimally and precisely as possible to reproduce it)  ?
     validations:
-      required: false
+      required: true
   - type: textarea
     id: expected
     attributes:
       label: Expected to happen	      
       description: What did you expect to happen ?
     validations:
-      required: false	
+      required: true	
   - type: textarea
     id: Add
     attributes:
@@ -34,7 +34,7 @@ body:
       description: Anything else you would like to add ?
       placeholder: Miscellaneous information that will help to resolve the issue
     validations:
-      required: false
+      required: true
   - type: textarea
     id: cluster-api-output
     attributes:
@@ -42,13 +42,13 @@ body:
       description: cluster-api/cluster-api-provider-outscale output
       placeholder: cluster-api/cluster-api-provider-outscale logs that will help us to understand what happened
     validations:
-      required: false
+      required: true
   - type: textarea
     id: env
     attributes:
       label: Environment
       description: |
-        examples:
+        example:
           - **Kubernetes version: (use `kubectl version`)**: v1.23.6
           - **OS (e.g. from `/etc/os-release`)**: CentOS Linux 7 (Core)
           - **Kernel (e.g. `uname -a`)**: 3.10.0-1160.15.2.el7.x86_64
@@ -68,4 +68,4 @@ body:
           - Kubernetes Diestribution version: 
       render: markdown
     validations:
-      required: false
+      required: true
