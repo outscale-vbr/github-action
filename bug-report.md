@@ -1,4 +1,4 @@
-name: Bug Report
+name: Bug Reports
 description: Report a bug enccountered while using cluster-api
 title: "[Bug]: "
 labels: ["bug"]
