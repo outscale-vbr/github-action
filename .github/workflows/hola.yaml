@@ -1,15 +1,12 @@
 name: hola
 
 on:
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
   workflow_run:
-    workflows: ["hello"]
+    workflows: ["Run Tests"]
     branches: [main]
-    types:
+    types: 
       - completed
-
 jobs:
   hola:
     runs-on: ubuntu-latest
