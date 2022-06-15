@@ -11,9 +11,12 @@ on:
       - completed
 
 jobs:
-  hello:
+  hola:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: hola
       run: bash -c "echo 'hola'"
+    - name: sleep
+      run: bash -c "sleep 60"
+~                                 
